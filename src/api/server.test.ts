@@ -9,7 +9,7 @@ describe('GET /hello', () => {
             .end((err, res) => {
                 if (err)
                     return done(err);
-                expect(res.body).toMatchObject({ 'message': 'Hello, stranger!' });
+                expect(res.text).toEqual('Hello, World!');
                 done();
             })
     });
